@@ -5,8 +5,10 @@ require_relative('../car')
 class Test_Car < MiniTest::Test
 
   def setup
-    @car1 = Car.new("Honda", "Civic")
-    @car2 = Car.new("BMW", "M3")
+    @performance = Engine.new(20, 10)
+    @eco = Engine.new(10, 5)
+    @car1 = Car.new("Honda", "Civic", @eco)
+    @car2 = Car.new("BMW", "M3", @performance)
   end
 
   def test_get_car_make
@@ -35,7 +37,9 @@ class Test_Car < MiniTest::Test
 
   def test_get_max_acceleration
     max_speed = Car::MAXIMUM_SPEED
-    @car1.accelerate()
+    20.times do
+      @car1.accelerate()
+    end
     assert_equal(max_speed, @car1.speed)
   end
 

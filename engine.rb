@@ -1,16 +1,11 @@
 class Engine
 
-attr_reader :engine
+attr_reader :type, :speed_level, :fuel_usage
 
-  def initialize(engine)
-    @engine = engine
-  end
-
-  def speed(accelerate)
-    if engine = "performance"
-     return accelerate_perf
-   else 
-    return accelerate
+  def initialize(type, speed_level, fuel_usage)
+    @type = type
+    @speed_level = speed_level
+    @fuel_usage = fuel_usage
   end
 
 end
