@@ -44,5 +44,4 @@ class Test_Car < MiniTest::Test
     assert_equal(min_speed, @car1.brake)
   end
 
-
 end

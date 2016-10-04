@@ -17,8 +17,7 @@ MAXIMUM_SPEED = 180
 
   def accelerate
     while @speed < MAXIMUM_SPEED
-      @speed += ACCELERATE_INCREASE 
-      @fuel_level -= FUEL_DECREASE 
+      (@speed += ACCELERATE_INCREASE) && (@fuel_level -= FUEL_DECREASE) 
     end
   end
 
@@ -29,8 +28,6 @@ MAXIMUM_SPEED = 180
       return 0
     end
   end
-
-
 
 
 end
