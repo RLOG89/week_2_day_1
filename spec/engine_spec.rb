@@ -10,8 +10,5 @@ class Test_Car < MiniTest::Test
       @eco = Engine.new
   end
 
-  @engine_performance = engine.new()
-  @engine_eco = engine.new()
-
 
 end
